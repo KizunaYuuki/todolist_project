@@ -1,5 +1,5 @@
 const app = require("./app");
-const config = require("./app/config/server.config");
+const config = require("./app/config/config");
 // const MongoDB = require("./app/utils/mongodb.util");
 
 app.listen(config.app.port, () => {
