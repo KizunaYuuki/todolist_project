@@ -16,4 +16,10 @@ router.route('/:id')
     .put(todolist.update)
     .delete(todolist.delete);
 
+// router.route('/login')
+//     .get(todolist.login);
+
+// router.route('/register')
+//     .post(todolist.register);
+
 module.exports = router;

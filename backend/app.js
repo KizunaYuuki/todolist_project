@@ -11,7 +11,7 @@ app.use("/api/todolist", todolistRouter);
 
 app.get("/", (req, res) => {
     res.json({
-        message: "Welcome to contact book application."
+        message: "Welcome to todolist book application."
     });
 });
 // handle 404 response
