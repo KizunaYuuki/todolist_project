@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require("express");
 const cors = require("cors");
 const todolistRouter = require("./app/routes/route");
@@ -11,7 +13,7 @@ app.use("/api/todolist", todolistRouter);
 
 app.get("/", (req, res) => {
     res.json({
-        message: "Welcome to todolist book application."
+        message: "Welcome to todolist application."
     });
 });
 // handle 404 response

@@ -1,3 +1,5 @@
+'use strict';
+
 const { ObjectId } = require("mongodb");
 
 class TodolistService {

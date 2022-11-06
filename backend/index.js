@@ -1,3 +1,5 @@
+'use strict';
+
 const app = require("./app");
 const config = require("./app/config/config");
 const MongoDB = require("./app/utils/mongodb.util");

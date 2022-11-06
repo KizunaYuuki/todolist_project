@@ -1,5 +1,8 @@
+'use strict';
+
 const express = require('express');
-const todolist = require('../controllers/controller');
+const todolist = require('../controllers/todolist.controller');
+const info = require('../controllers/info.controller');
 
 const router = express.Router();
 
@@ -17,9 +20,9 @@ router.route('/:id')
     .delete(todolist.delete);
 
 // router.route('/login')
-//     .get(todolist.login);
+//     .get(info.login);
 
-// router.route('/register')
-//     .post(todolist.register);
+router.route('/register')
+    .post(info.register);
 
 module.exports = router;

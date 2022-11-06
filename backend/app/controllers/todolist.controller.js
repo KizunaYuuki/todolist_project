@@ -1,3 +1,5 @@
+'use strict';
+
 // exports
 const TodolistService = require("../services/todolist.service");
 const MongoDB = require("../utils/mongodb.util");
