@@ -10,7 +10,7 @@ class InfoService {
     extractInfoData(payload) {
         const info = {
             username: payload.username,
-            password: payload.password,
+            password: payload.password
         };
         // remove undefined fields
         Object.keys(info).forEach(
@@ -27,6 +27,15 @@ class InfoService {
             { returnDocument: "after", upsert: true }
         );
         return result.value;
+    }
+    async find(filter) {
+        const cursor = await this.Info.find(filter);
+        return await cursor.toArray();
+    }
+    async findByName(name) {
+        return await this.find({
+            name: { $regex: new RegExp(name), $options: "i" },
+        });
     }
 }
 module.exports = InfoService;
