@@ -5,12 +5,15 @@ const { ObjectId } = require("mongodb");
 class InfoService {
     constructor(client) {
         this.Info = client.db("todolistProject").collection("info");
+
+        // create unipue index for username, can not create 2 info same username
+        this.Info.createIndex ( { "username": 1 }, { unique: true } ) 
     }
     // Định nghĩa các phương thức truy xuất CSDL sử dụng mongodb API
     extractInfoData(payload) {
         const info = {
-            username: payload.username,
-            password: payload.password
+            username: payload.username, 
+            password: payload.password, // skip password hash
         };
         // remove undefined fields
         Object.keys(info).forEach(
