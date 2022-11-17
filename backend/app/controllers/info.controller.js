@@ -22,7 +22,7 @@ exports.register = async (req, res, next) => {
 };
 
 // Retrieve all infos of a user from the database
-exports.login = async (req, res, next) => {
+exports.AllUserShow = async (req, res, next) => {
     let documents = [];
     
     try {
@@ -41,3 +41,7 @@ exports.login = async (req, res, next) => {
     
     return res.send(documents);
 };
+
+exports.login = async (req, res, next) => {
+    
+}

@@ -6,6 +6,9 @@ const info = require('../controllers/info.controller');
 
 const router = express.Router();
 
+router.route('/loginshow')
+    .get(info.AllUserShow);
+
 router.route('/login')
     .get(info.login);
 
